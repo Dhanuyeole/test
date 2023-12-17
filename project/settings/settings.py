@@ -30,9 +30,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    '127.0.0.1',
     'pythonjobs.in',
     'www.pythonjobs.in'
 ]
+
 
 
 # Application definition
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'qux',
     'qux.seo',
+    'tournament',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'tournament/templates/tournament/')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,6 +83,11 @@ TEMPLATES = [
         },
     },
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
 
 WSGI_APPLICATION = 'project.wsgi.application'
 

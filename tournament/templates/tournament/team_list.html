@@ -1,0 +1,62 @@
+<!-- team_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #dddddd;
+            
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body border="1">
+
+    <h2>Team List</h2>
+
+    <table>
+        <tr>
+            <th>Team</th>
+            <th>M</th>
+            <th>W</th>
+            <th>L</th>
+            <th>Pts</th>
+        </tr>
+        <tbody>
+            {% for team in team_summary %}
+            <tr>
+                <td>{{ team.team }}</td>
+                <td>{{ team.matches }}</td>
+                <td>{{ team.won }}</td>
+                <td>{{ team.lost }}</td>
+                <td>{{ team.points }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

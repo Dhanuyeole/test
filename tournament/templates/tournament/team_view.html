@@ -1,0 +1,81 @@
+<!-- tournament/templates/team_matches.html -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Team Matches</title>
+</head>
+<body>
+
+<h1>{{ team.country }} Matches</h1>
+
+<ul>
+    {% for match in team_matches %}
+    
+        <li>{{ match.match.date }} - Score: {{ match.batting_score }}, Wickets: {{ match.batting_wickets }}, Overs: {{ match.batting_overs }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html> -->
+<!-- team_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #dddddd;
+
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body border="1">
+
+    <h1>{{ team.country }} Matches</h1>
+
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Wickets</th>
+            <th>Overs</th>
+        </tr>
+        <tbody>
+            {% for match in team_matches %}
+            <tr>
+                <td>{{ match.match.date }}</td>
+                <td>{{ match.batting_score }}</td>
+                <td>{{ match.batting_wickets }}</td>
+                <td>{{ match.batting_overs }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

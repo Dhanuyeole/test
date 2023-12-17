@@ -1,0 +1,55 @@
+WARNING: The candidate selected for download or install is a yanked version: 'executing' candidate (version 2.0.0 at https://files.pythonhosted.org/packages/bb/3f/748594706233e45fd0e6fb57a2fbfe572485009c52b19919d161a0ae5d52/executing-2.0.0-py2.py3-none-any.whl (from https://pypi.org/simple/executing/))
+Reason for being yanked: Released 2.0.1 which is equivalent but added 'python_requires = >=3.5' so that pip install with Python 2 uses the previous version 1.2.0.
+  error: subprocess-exited-with-error
+  
+  Building wheel for backports.zoneinfo (pyproject.toml) did not run successfully.
+  exit code: 1
+  
+  [39 lines of output]
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win-amd64-cpython-311
+  creating build\lib.win-amd64-cpython-311\backports
+  copying src\backports\__init__.py -> build\lib.win-amd64-cpython-311\backports
+  creating build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\_common.py -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\_tzpath.py -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\_version.py -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\_zoneinfo.py -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\__init__.py -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  running egg_info
+  writing src\backports.zoneinfo.egg-info\PKG-INFO
+  writing dependency_links to src\backports.zoneinfo.egg-info\dependency_links.txt
+  writing requirements to src\backports.zoneinfo.egg-info\requires.txt
+  writing top-level names to src\backports.zoneinfo.egg-info\top_level.txt
+  reading manifest file 'src\backports.zoneinfo.egg-info\SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no files found matching '*.png' under directory 'docs'
+  warning: no files found matching '*.svg' under directory 'docs'
+  no previously-included directories found matching 'docs\_build'
+  no previously-included directories found matching 'docs\_output'
+  adding license file 'LICENSE'
+  adding license file 'licenses/LICENSE_APACHE'
+  writing manifest file 'src\backports.zoneinfo.egg-info\SOURCES.txt'
+  copying src\backports\zoneinfo\__init__.pyi -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  copying src\backports\zoneinfo\py.typed -> build\lib.win-amd64-cpython-311\backports\zoneinfo
+  running build_ext
+  building 'backports.zoneinfo._czoneinfo' extension
+  creating build\temp.win-amd64-cpython-311
+  creating build\temp.win-amd64-cpython-311\Release
+  creating build\temp.win-amd64-cpython-311\Release\lib
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -IC:\Users\User\Desktop\Dhanvantari\1e9\shallow\venv\include -IC:\Users\User\AppData\Local\Programs\Python\Python311\include -IC:\Users\User\AppData\Local\Programs\Python\Python311\Include "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\include" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt" /Tclib/zoneinfo_module.c /Fobuild\temp.win-amd64-cpython-311\Release\lib/zoneinfo_module.obj
+  zoneinfo_module.c
+  lib/zoneinfo_module.c(600): error C2065: '_PyLong_One': undeclared identifier
+  lib/zoneinfo_module.c(600): warning C4047: '=': 'PyObject *' differs in levels of indirection from 'int'
+  error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x64\\cl.exe' failed with exit code 2
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for backports.zoneinfo
+ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
+
+[notice] A new release of pip available: 22.3.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
